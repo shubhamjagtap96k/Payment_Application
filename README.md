@@ -132,3 +132,63 @@ Validation (email format, required fields, size constraints)
 Auto-generated timestamps (createdAt, updatedAt)
 Unique constraints on username and email
 User roles (ADMIN, CUSTOMER, MERCHANT)
+-----------------------------------------------------------------------------
+Complete User Module with:
+
+Entity (User)
+Repository (UserRepository)
+Service (UserService)
+Controller (UserController)
+DTOs (UserDTO, CreateUserRequest)
+Enum (UserRole)
+
+
+
+🚀 How to Run:
+Step 1: Setup PostgreSQL Database
+sqlCREATE DATABASE payment_db;
+Step 2: Update application.properties
+Change username/password if needed:
+propertiesspring.datasource.username=your_postgres_username
+spring.datasource.password=your_postgres_password
+Step 3: Run the Application
+bashmvn clean install
+mvn spring-boot:run
+🧪 Test the APIs (Using Postman or cURL):
+1. Create a User
+bashPOST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "email": "john@example.com",
+  "password": "password123",
+  "fullName": "John Doe",
+  "phoneNumber": "1234567890"
+}
+2. Get All Users
+bashGET http://localhost:8080/api/users
+3. Get User by ID
+bashGET http://localhost:8080/api/users/1
+4. Get User by Username
+bashGET http://localhost:8080/api/users/username/johndoe
+5. Update User
+bashPUT http://localhost:8080/api/users/1
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "email": "john@example.com",
+  "password": "password123",
+  "fullName": "John Doe Updated",
+  "phoneNumber": "9876543210"
+}
+6. Delete User
+bashDELETE http://localhost:8080/api/users/1
+✅ Features:
+
+CRUD operations for User
+Validation (email format, required fields, size constraints)
+Auto-generated timestamps (createdAt, updatedAt)
+Unique constraints on username and email
+User roles (ADMIN, CUSTOMER, MERCHANT)
