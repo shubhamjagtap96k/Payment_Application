@@ -78,8 +78,8 @@ Complete User Module with:
 Entity (User)
 Repository (UserRepository)
 Service (UserService)
-Controller (UserController)
-DTOs (UserDTO, CreateUserRequest)
+Controller (User Controller)
+DTOs (UserDTO, CreateUser Request)
 Enum (UserRole)
 
 
