@@ -38,7 +38,7 @@ Payment status tracking
 
 Transaction Management
 
-Transaction history
+Transaction history and payment history
 Transaction details
 Refund handling
 
