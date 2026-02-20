@@ -68,7 +68,7 @@ Authentication: JWT tokens
 
 5. Basic Flow
 User → Register/Login → Select Service → Initiate Payment 
-→ Process Payment → Update Status → Send Confirmation
+→ Process Payment → Update Status → Send Confirmation details and information
 
 
 pom.xml - All necessary Maven dependencies
